@@ -1,0 +1,43 @@
+.sidebar {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #8f8f8f;
+  color: black;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.sidebar .toggle-btn {
+  left: 20px;
+  font-size: 30px;
+  margin-top: 15px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  text-align: center;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.content {
+  margin-left: 300px;
+  transition: margin-left 0.3s;
+}

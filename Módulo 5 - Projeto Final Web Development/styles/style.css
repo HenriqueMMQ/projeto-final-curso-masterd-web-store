@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  height: auto !important;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 255, 255);
+  height: auto !important;
+}
+
+li {
+  list-style: none;
+  margin-right: 20px;
+  font-size: 1rem;
+}
+
+li a {
+  color: #1ac;
+}
+
+table {
+  width: 100%;
+  min-width: 800px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.fancybox__content {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+  padding: 2rem;
+  max-width: 100%;
+  color: var(--fancybox-content-color, #374151);
+  background: var(--fancybox-content-bg, #fff);
+  cursor: default;
+  border-radius: 0;
+  z-index: 20;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,600");
+
+:root {
+  --background: orangered;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.content {
+  height: 200vh;
+  background-color: #333;
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, 0.75);
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle-label {
+  display: none;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  width: 100%;
+  background: var(--background);
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+.logo {
+  grid-column: 2 / 3;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+  transform: scale(1, 1);
+  left: initial;
+  grid-column: 3 / 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin-left: 3em;
+  margin-bottom: 0;
+}
+
+nav a {
+  opacity: 1;
+  position: relative;
+}
+
+nav a:hover::before {
+  transform: scale(1, 1);
+}
+
+.search-section {
+  width: 300px;
+  display: block;
+}
+
+.search-section button {
+  width: 100%;
+}
+
+.value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 11px 0;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+
+form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+input#number {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
